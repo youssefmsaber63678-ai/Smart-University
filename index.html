@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart University | Student Portal</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo">
+            Smart<span>Uni</span>
+        </div>
+
+        <nav>
+
+            <a href="#dashboard" class="nav-link active">
+                <span>⌂</span>
+                Dashboard
+            </a>
+
+            <a href="#courses" class="nav-link">
+                <span>▣</span>
+                Courses
+            </a>
+
+            <a href="#schedule" class="nav-link">
+                <span>◷</span>
+                Schedule
+            </a>
+
+            <a href="#assignments" class="nav-link">
+                <span>✓</span>
+                Assignments
+            </a>
+
+            <a href="#grades" class="nav-link">
+                <span>▤</span>
+                Grades
+            </a>
+
+            <a href="#attendance" class="nav-link">
+                <span>◉</span>
+                Attendance
+            </a>
+
+            <a href="#ai" class="nav-link">
+                <span>✦</span>
+                AI Assistant
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button id="themeBtn">
+                🌙 Dark Mode
+            </button>
+
+            <button id="logoutBtn">
+                ⇥ Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button id="menuBtn" class="menu-btn">
+                ☰
+            </button>
+
+            <div class="search">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search courses, assignments..."
+                >
+
+                <span>⌕</span>
+
+            </div>
+
+            <div class="top-actions">
+
+                <button class="notification">
+                    🔔
+                    <span>3</span>
+                </button>
+
+                <div class="profile">
+
+                    <div class="avatar">
+                        YS
+                    </div>
+
+                    <div>
+                        <strong>Youssef Saber</strong>
+                        <small>Computer Science</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+
+        <section class="dashboard" id="dashboard">
+
+            <div class="welcome">
+
+                <div>
+
+                    <span>STUDENT DASHBOARD</span>
+
+                    <h1>
+                        Good Evening, Youssef 👋
+                    </h1>
+
+                    <p>
+                        Here's what's happening with your studies today.
+                    </p>
+
+                </div>
+
+                <div class="date">
+                    <strong id="currentDate"></strong>
+                </div>
+
+            </div>
+
+
+            <!-- STATS -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <span>GPA</span>
+
+                        <h2>3.42</h2>
+
+                        <small>
+                            ↑ 0.18 this semester
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <span>Attendance</span>
+
+                        <h2>87%</h2>
+
+                        <small>
+                            Good standing
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        ◈
+                    </div>
+
+                    <div>
+
+                        <span>Courses</span>
+
+                        <h2>6</h2>
+
+                        <small>
+                            This semester
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        ◷
+                    </div>
+
+                    <div>
+
+                        <span>Assignments</span>
+
+                        <h2>4</h2>
+
+                        <small>
+                            Pending
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTENT GRID -->
+
+            <div class="content-grid">
+
+                <!-- SCHEDULE -->
+
+                <div class="card schedule" id="schedule">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span>THIS WEEK</span>
+
+                            <h2>
+                                Class Schedule
+                            </h2>
+
+                        </div>
+
+                        <button>
+                            View All →
+                        </button>
+
+                    </div>
+
+
+                    <div class="schedule-list">
+
+                        <div class="class-item">
+
+                            <div class="class-time">
+                                09:00
+                                <small>AM</small>
+                            </div>
+
+                            <div class="class-line"></div>
+
+                            <div class="class-info">
+
+                                <h3>
+                                    Database Systems
+                                </h3>
+
+                                <p>
+                                    Dr. Ahmed Ali · Room 204
+                                </p>
+
+                            </div>
+
+                            <span class="class-type">
+                                Lecture
+                            </span>
+
+                        </div>
+
+
+                        <div class="class-item">
+
+                            <div class="class-time">
+                                11:00
+                                <small>AM</small>
+                            </div>
+
+                            <div class="class-line"></div>
+
+                            <div class="class-info">
+
+                                <h3>
+                                    Web Development
+                                </h3>
+
+                                <p>
+                                    Dr. Sara Mohamed · Lab 3
+                                </p>
+
+                            </div>
+
+                            <span class="class-type">
+                                Lab
+                            </span>
+
+                        </div>
+
+
+                        <div class="class-item">
+
+                            <div class="class-time">
+                                01:00
+                                <small>PM</small>
+                            </div>
+
+                            <div class="class-line"></div>
+
+                            <div class="class-info">
+
+                                <h3>
+                                    Artificial Intelligence
+                                </h3>
+
+                                <p>
+                                    Dr. Omar Hassan · Room 105
+                                </p>
+
+                            </div>
+
+                            <span class="class-type">
+                                Lecture
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PERFORMANCE -->
+
+                <div class="card performance">
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span>ACADEMIC</span>
+
+                            <h2>
+                                Performance
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="performance-circle">
+
+                        <div>
+
+                            <strong>
+                                82%
+                            </strong>
+
+                            <span>
+                                Overall
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="performance-info">
+
+                        <div>
+
+                            <span>
+                                Assignments
+                            </span>
+
+                            <strong>
+                                88%
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Exams
+                            </span>
+
+                            <strong>
+                                79%
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Attendance
+                            </span>
+
+                            <strong>
+                                87%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- COURSES -->
+
+            <div class="section-title" id="courses">
+
+                <div>
+
+                    <span>MY COURSES</span>
+
+                    <h2>
+                        Current Courses
+                    </h2>
+
+                </div>
+
+                <button>
+                    View All
+                </button>
+
+            </div>
+
+
+            <div class="courses-grid">
+
+                <div class="course-card">
+
+                    <div class="course-top blue-bg">
+                        DATABASE
+                    </div>
+
+                    <div class="course-content">
+
+                        <span>CS301</span>
+
+                        <h3>
+                            Database Systems
+                        </h3>
+
+                        <p>
+                            Dr. Ahmed Ali
+                        </p>
+
+                        <div class="progress">
+
+                            <div
+                                style="width: 82%">
+                            </div>
+
+                        </div>
+
+                        <small>
+                            82% completed
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-top purple-bg">
+                        WEB
+                    </div>
+
+                    <div class="course-content">
+
+                        <span>CS305</span>
+
+                        <h3>
+                            Web Development
+                        </h3>
+
+                        <p>
+                            Dr. Sara Mohamed
+                        </p>
+
+                        <div class="progress">
+
+                            <div
+                                style="width: 91%">
+                            </div>
+
+                        </div>
+
+                        <small>
+                            91% completed
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-top green-bg">
+                        AI
+                    </div>
+
+                    <div class="course-content">
+
+                        <span>CS401</span>
+
+                        <h3>
+                            Artificial Intelligence
+                        </h3>
+
+                        <p>
+                            Dr. Omar Hassan
+                        </p>
+
+                        <div class="progress">
+
+                            <div
+                                style="width: 68%">
+                            </div>
+
+                        </div>
+
+                        <small>
+                            68% completed
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-top orange-bg">
+                        ANALYSIS
+                    </div>
+
+                    <div class="course-content">
+
+                        <span>CS302</span>
+
+                        <h3>
+                            Data Analysis
+                        </h3>
+
+                        <p>
+                            Dr. Mahmoud Ali
+                        </p>
+
+                        <div class="progress">
+
+                            <div
+                                style="width: 76%">
+                            </div>
+
+                        </div>
+
+                        <small>
+                            76% completed
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ASSIGNMENTS -->
+
+            <div class="content-grid lower">
+
+                <div
+                    class="card assignments"
+                    id="assignments"
+                >
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span>UPCOMING</span>
+
+                            <h2>
+                                Assignments
+                            </h2>
+
+                        </div>
+
+                        <button>
+                            View All →
+                        </button>
+
+                    </div>
+
+
+                    <div class="assignment-list">
+
+                        <div class="assignment">
+
+                            <div class="assignment-icon">
+                                DB
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    SQL Database Project
+                                </h3>
+
+                                <p>
+                                    Database Systems
+                                </p>
+
+                            </div>
+
+                            <span class="deadline">
+                                2 Days
+                            </span>
+
+                        </div>
+
+
+                        <div class="assignment">
+
+                            <div class="assignment-icon">
+                                JS
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    JavaScript Application
+                                </h3>
+
+                                <p>
+                                    Web Development
+                                </p>
+
+                            </div>
+
+                            <span class="deadline">
+                                5 Days
+                            </span>
+
+                        </div>
+
+
+                        <div class="assignment">
+
+                            <div class="assignment-icon">
+                                AI
+                            </div>
+
+                            <div>
+
+                                <h3>
+                                    AI Research Paper
+                                </h3>
+
+                                <p>
+                                    Artificial Intelligence
+                                </p>
+
+                            </div>
+
+                            <span class="deadline">
+                                8 Days
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ATTENDANCE -->
+
+                <div
+                    class="card attendance"
+                    id="attendance"
+                >
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <span>ATTENDANCE</span>
+
+                            <h2>
+                                This Semester
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="attendance-item">
+
+                        <div>
+
+                            <span>
+                                Database
+                            </span>
+
+                            <strong>
+                                92%
+                            </strong>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <div
+                                style="width: 92%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="attendance-item">
+
+                        <div>
+
+                            <span>
+                                Web Development
+                            </span>
+
+                            <strong>
+                                95%
+                            </strong>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <div
+                                style="width: 95%">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="attendance-item warning">
+
+                        <div>
+
+                            <span>
+                                Artificial Intelligence
+                            </span>
+
+                            <strong>
+                                78%
+                            </strong>
+
+                        </div>
+
+                        <div class="bar">
+
+                            <div
+                                style="width: 78%">
+                            </div>
+
+                        </div>
+
+                        <small>
+                            ⚠ Attendance is below 80%
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI -->
+
+            <section
+                class="ai-section"
+                id="ai"
+            >
+
+                <div class="ai-header">
+
+                    <div>
+
+                        <span>SMART UNIVERSITY AI</span>
+
+                        <h2>
+                            AI Study Assistant
+                        </h2>
+
+                    </div>
+
+                    <div class="ai-icon">
+                        ✦
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="chat"
+                    id="chat"
+                >
+
+                    <div class="ai-message">
+
+                        <div class="ai-avatar">
+                            AI
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                SmartUni AI
+                            </strong>
+
+                            <p>
+                                Hi Youssef! 👋
+                                How can I help you with your studies today?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-questions">
+
+                    <button data-question="Create a study plan">
+                        📅 Create study plan
+                    </button>
+
+                    <button data-question="Explain SQL JOIN">
+                        📚 Explain SQL JOIN
+                    </button>
+
+                    <button data-question="Analyze my performance">
+                        📊 Analyze performance
+                    </button>
+
+                </div>
+
+
+                <form
+                    class="chat-form"
+                    id="chatForm"
+                >
+
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Ask SmartUni AI anything..."
+                    >
+
+                    <button>
+                        Send
+                    </button>
+
+                </form>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
